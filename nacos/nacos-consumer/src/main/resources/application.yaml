@@ -1,0 +1,15 @@
+# ************************************************************分割线************************************************************
+
+server:
+  port: 82
+
+spring:
+  application:
+    name: nacos-consumer
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: dev

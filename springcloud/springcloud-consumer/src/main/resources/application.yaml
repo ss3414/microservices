@@ -1,0 +1,26 @@
+# ************************************************************分割线************************************************************
+
+spring:
+  application:
+    name: springcloud-consumer
+  freemarker:
+    suffix: .ftl
+    template-loader-path: classpath:/templates
+  cloud:
+    openfeign:
+      okhttp:
+        enabled: true
+
+server:
+  port: 82
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    status-page-url-path: /actuator/info
+    health-check-url-path: /actuator/health
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:80/eureka/

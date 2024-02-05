@@ -1,0 +1,23 @@
+# ************************************************************分割线************************************************************
+
+server:
+  port: 80
+
+spring:
+  application:
+    name: nacos-sentinel
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: dev
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8080
+        port: 8719
+
+feign:
+  sentinel:
+    enabled: true

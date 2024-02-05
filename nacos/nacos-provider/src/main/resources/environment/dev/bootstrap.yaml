@@ -1,0 +1,19 @@
+# ************************************************************分割线************************************************************
+
+#server:
+#  port: 81
+
+spring:
+  application:
+    name: nacos-provider
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848 # 注意地址/用户名/密码的位置
+      username: nacos
+      password: nacos
+      discovery: # 注册中心
+        namespace: dev
+      config: # 配置中心
+        namespace: dev
+        group: DEFAULT_GROUP
+        file-extension: yaml

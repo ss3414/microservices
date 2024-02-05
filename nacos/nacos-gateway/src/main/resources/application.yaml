@@ -1,0 +1,28 @@
+# ************************************************************分割线************************************************************
+
+server:
+  port: 80
+
+spring:
+  application:
+    name: nacos-gateway
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      discovery:
+        namespace: dev
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: provider
+          uri: lb://nacos-provider # 需要与Nacos上服务名对应
+          predicates:
+            - Path=/provider/**
+        - id: consumer
+          uri: lb://nacos-consumer
+          predicates:
+            - Path=/consumer/**

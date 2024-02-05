@@ -1,0 +1,14 @@
+# ************************************************************分割线************************************************************
+
+spring:
+  application:
+    name: nacos-provider
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username: nacos
+      password: nacos
+      config:
+        namespace: pro
+        group: DEFAULT_GROUP
+        file-extension: yaml
